@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <script src="fileUploader.js" type="text/javascript"></script>
+        <link rel="stylesheet" type="text/css"  href="circular-progress.css" />
+    </head>
+    <body>
+
+        <div class="file-upload-container">
+            <input type="file" class="upload-file" name="myfile" onchange="showName()" />
+            <button class="upload-button" onclick="document.getElementsByClassName('upload-file')[0].click();">Select a file</button>
+            <br> <br>
+            <div class="progress-container">
+                <div class="progress"></div>
+            </div>
+            <br>
+            <br>
+            <button onclick="startUpload()"> Upload</button>
+        </div>
+        </form>
+    </body>
+</html>

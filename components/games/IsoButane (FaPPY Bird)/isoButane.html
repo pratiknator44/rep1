@@ -1,0 +1,288 @@
+<html>
+    <head>
+        <title>IsoButane</title>
+        <script src="js/jq.js"></script>
+        <script src="js/IsoButaneScript.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="scoreboard">
+                <table class="socreboardTable" border="0">
+                    <tr>
+                        <td class="lives"></td>
+                        <td class="livesValue">x3</td>
+                        <td class="scoreLabel">Score</td>
+                        <td class="scoreValue">00</td>
+                        <td></td>
+                        <td class="scoreLabel">Velocity</td>
+                        <td class="velocityValue">1</td>
+                        <td class="audioSwitch"></td>
+                    </tr>
+
+
+                </table>
+
+
+
+            </div>
+            <div class="bird"></div>
+            <div id="blockTop" class="block"></div>
+            <div id="blockBottom" class="block"></div>
+
+            <div class="gameOver" id="gameOver">
+                <div class="gameOverLabel">GAME OVER</div>
+                <br>
+                score<br>
+                <label class="scoreDisplay gameOverLabel" style="color: royalblue">0</label>
+                <br>
+                <button class="restart"></button>
+            </div>
+            <div class="gameOver" id="gameStart">
+                <div class="gameOverLabel">FLAPPY BIRD</div>
+                <br>
+                <label class="gameDiscription">Press SPACE to make the birdie pass from the gap between the blocks, like you do in FLAPPY BIRD!  </label>
+                <br><br>
+                <button class="startGame" id="startGame" onclick="gameStart">GO!</button>
+                <div class="credits"><label style="float:left;">Programmed by <strong>Pratik</strong></label>
+                    <label style="float:right;"> &nbsp;background score: <strong>Spring</strong> by Vivaldi &nbsp;</label></div>
+            </div>
+            <div class="cloud" id="cloud1"></div>
+
+        </div>
+
+
+        
+
+
+        <audio class="backgroundAudio" id="myAudio">
+            <source src="bgScore/spring.mp3" type="audio/mpeg">
+          </audio>
+
+    </body>
+</html>
+
+<style>
+    body
+    {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        overflow: hidden;
+    }
+
+    .container
+    {
+        height: 100%;
+        width: 100%;
+        background-color:darkturquoise;
+        overflow: hidden;
+        position: relative;
+        z-index: 0.5;
+    }
+
+    .scoreboard
+    {
+        height: 30px;
+        width: 100%;
+        position: absolute;
+        top:0px;
+        background-color:none;
+        z-index: 0.7;
+    }
+    .bird
+    {
+        height: 52px;
+        width: 58px;
+        background-image: url('img/bird.png');
+        background-position: center;
+        position: absolute;
+        top:300px; left: 400px;
+        z-index: 1;
+        animation: rotateBird 3s;
+        animation-iteration-count: 1000;
+    }
+
+    @keyframes rotateBird
+    {
+        from{transform: rotate(0deg);}
+        to{transform: rotate(360deg);}
+    }
+
+    .block
+    {
+        position: absolute;
+        background-color:chocolate;
+        z-index: 1;
+        right: -50px;
+    }
+    #blockTop
+    {
+        height: 100px;
+        width: 50px;
+        top: 0px;
+       
+    }
+
+    #blockBottom
+    {
+        height: 300px;
+        width: 50px;
+        bottom: 0px;
+
+    }
+
+    .lives
+    {
+        width:  30px;
+        background-image: url('img/bird.png');
+        background-position: center;
+        background-size: contain;
+        background-repeat:no-repeat;
+    }
+    .livesValue
+    {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        width: 30%;
+    }
+
+    .socreboardTable
+    {
+        height: 30px;
+        width: 100%;
+        position: absolute;
+        color: white;
+    }
+
+    .scoreLabel
+    {
+        font-size: 15px;
+        font-family: 'Courier New', Courier, monospace;
+        width:60px;
+        color: white;
+        border-radius: 10px;
+        text-align: center;
+    }
+
+    .scoreValue, .velocityValue
+    {
+        font-size: 17px;
+        font-family: Arial, Helvetica, sans-serif;
+        width: 50px;
+        background-color: white;
+        color:darkturquoise;
+        border-radius: 10px;
+        text-align: center;
+    }
+
+    .gameOver, .gameStart
+    {
+        height: 50%;
+        width: 50%;
+        margin-top:12.5%;
+        margin-left:25%;
+        background-color:lightblue;
+        position: absolute;
+        text-align: center;
+        display: none;
+    }
+
+    .gameOverLabel
+    {
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif, Courier, monospace;
+        font-size: 75px;
+    }
+
+    .restart
+    {
+        height: 100px;
+        width: 100px;
+        border-radius: 50px;
+        border:none;
+        cursor: pointer;
+        left: 30%;
+        background-color: teal;
+        background-image: url('img/restartButtonBG.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: auto;
+
+    }
+
+    .startGame
+    {
+        height: 100px;
+        width: 100px;
+        border-radius: 50px;
+        border:none;
+        cursor: pointer;
+        left: 30%;
+        background-color: teal;
+        text-align: center;
+        color: white;
+    }
+
+    .startGame:hover
+    {
+        font-size: 20px;
+    }
+
+    .gameDiscription
+    {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: teal;
+        color: white;
+    }
+
+    .restart:hover
+    {
+        animation: rotateRestart 1s;
+    }
+
+    @keyframes rotateRestart
+    {
+        from{transform: rotate(0deg);}
+        to {transform: rotate(360deg);}
+    }
+
+    .cloud
+    {
+        z-index: 0.1;
+    }
+
+    #cloud1
+    {
+        height: 140px;
+        width: 277px;
+        background-image: url('img/cloud1.png');
+        background-repeat: no-repeat;
+        background-size: auto;
+        background-position: center;
+        top:150px;
+        left:0px;
+        position: absolute;
+        animation: moveCloud1 60s;
+        animation-direction: alternate-reverse;
+        animation-iteration-count: 100;
+    }
+
+    @keyframes moveCloud1
+    {
+        from{left:0px;}
+        to{left:1080px;}
+    }
+
+    .backgroundAudio
+    {
+        display: none;
+    }
+
+    .credits
+    {
+        bottom: 0px;
+        width: 100%;
+        background-color: aliceblue;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        height: 30px;
+        position: absolute;
+    }
+</style>

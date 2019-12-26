@@ -1,0 +1,279 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+Fill animations <br>
+<div class="container font-arial">
+    Like: <br>
+    <div class="fill-button color-black like-btn">
+        <div class="bg-cornflower"></div>
+        <span class="fa fa-thumbs-up"></span> 
+        <label>Like</label>
+    </div>
+
+    Subscribe: <br>
+    <div class="fill-button subscribe-btn color-red">
+            <div class="bg-red"></div>
+            <span class="fa fa-youtube-play"></span> 
+            <label>Subscribe</label>
+    </div>
+
+    Select an OS: <br>
+    <div class="fill-button android-btn color-green">
+            <div class="bg-green"></div>
+            <span class="fa fa-android"></span> 
+            <label>Android</label>
+    </div>
+    <div class="fill-button win-btn color-blue">
+            <div class="bg-blue"></div>
+            <span class="fa fa-windows"></span> 
+            <label>Windows</label>
+    </div>
+    <div class="fill-button linux-btn color-black">
+            <div class="bg-black"></div>
+            <span class="fa fa-linux"></span> 
+            <label>Linux Distro</label>
+    </div>
+</div>
+
+<hr>
+Alexa, Turn OFF the lights!
+<div class="container font-arial bg-black position-relative" style="height: 300px;">
+
+    <div class="glow-btn grandient-1 color-white position-absolute">
+        PLAY
+    </div>
+
+</div>
+
+<style>
+.fill-button {
+    height: 40px;
+    width: auto;
+    border-radius: 5px;
+    display: table-cell;
+    font-family: arial;
+    vertical-align: middle;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+.color-black {
+    color: black;
+}
+.fill-button > label {
+    padding: 5px;
+    cursor: pointer;
+    z-index: 9;
+    position: relative;
+}
+
+.fill-button > span {
+    padding: 5px;
+    padding-right: 0px;
+    z-index: 9;
+    position: relative;
+}
+
+.fill-button > div {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    color: white; 
+}
+
+.bg-cornflower {
+    background-color: cornflowerblue;
+}
+
+
+/*
+* use the below class to add same effect on all buttons
+*/
+/* .fill-button:hover > div {
+    animation: drag-bg-to-left 0.15s forwards linear;
+} */
+
+/*
+* use this class to change the font color when background animation is complete
+*/
+/* .fill-button:hover {
+    color: white;
+} */
+
+
+/*
+* pre- position of div before animation
+*/
+.like-btn > div {
+    top:0; right:100%;
+}
+
+/* changes in parent on hover */
+.like-btn:hover {
+    color: white;
+}
+
+/* animation direction and timing */
+.like-btn:hover > div {
+    animation: drag-bg-to-right 0.15s forwards linear;
+}
+
+
+/*  other examples */
+
+/* subsribe */
+.subscribe-btn > div {
+    top:0; right:100%;
+}
+.subscribe-btn:hover {
+    color: white;
+}
+.subscribe-btn:hover > div {
+    animation: drag-bg-to-right 0.15s forwards linear;
+}
+
+/* android */
+.android-btn > div {
+    top:0; left:100%;
+}
+.android-btn:hover {
+    color: white;
+}
+.android-btn:hover > div {
+    animation: drag-bg-to-left 0.15s forwards linear;
+}
+
+/* windows */
+.win-btn > div {
+    top:100%; left: 0;
+}
+.win-btn:hover {
+    color: white;
+}
+.win-btn:hover > div {
+    animation: drag-bg-to-top 0.15s forwards linear;
+}
+
+/* Linux */
+.linux-btn > div {
+    bottom:100%; left:0;
+}
+.linux-btn:hover {
+    color: white;
+}
+.linux-btn:hover > div {
+    animation: drag-bg-to-bottom 0.15s forwards linear;
+}
+
+
+.bg-red {
+    background-color: red;
+}
+.color-red {
+    color: red;
+}
+
+.bg-green {
+    background-color: greenyellow;
+}
+.color-green {
+    color: green;
+}
+
+.bg-blue {
+    background-color: blue;
+}
+.color-blue {
+    color: blue;
+}
+
+.bg-black {
+    background-color: black;
+}
+.color-red {
+    color: black;
+}
+.color-white {
+    color: white;
+}
+
+.glow-btn {
+    height: 50px;
+    width: 200px;
+    border-radius: 5px;
+    background-image: linear-gradient(45deg,yellow, red, blue);
+    text-align: center;
+    vertical-align: middle;
+
+    /* alterable properties */
+    margin-left: 30px;
+    margin-top: 100px;
+    z-index: 3;
+    line-height: 50px;
+}
+
+.glow-btn:before,
+.glow-btn:after {
+    content: '';
+    position: absolute;
+    background-image: linear-gradient(45deg,yellow, red, blue);
+    width: 100%; height: 100%;
+    top:0; left:0;
+    border-radius: 5px;
+    z-index: -1;
+}
+
+.glow-btn:hover::after {
+    filter: blur(20px);
+    transition: filter 0.25s;
+}
+
+
+
+
+.position-relative {
+    position: relative;
+}
+
+@keyframes drag-bg-to-left {
+    0%{
+        left: 100%;
+    }
+    100%{
+        left: 0%;
+    }
+}
+
+@keyframes drag-bg-to-right {
+    0%{
+        right: 100%;
+    }
+    100%{
+        right: 0;
+    }
+}
+
+@keyframes drag-bg-to-bottom {
+    0%{
+        bottom: 100%;
+    }
+    100%{
+        bottom: 0%;
+    }
+}
+
+@keyframes drag-bg-to-top {
+    0%{
+        top: 100%;
+    }
+    100%{
+        top: 0%;
+    }
+}
+.font-arial {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #666;
+}
+.position-absolute {
+    position: absolute;
+}
+</style>

@@ -1,0 +1,172 @@
+<html>
+    <head>
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+        <link rel="stylesheet" href="sections.wallpaper/sections.wallpaper.css">
+
+    </head>
+    <body>
+
+        <div class="search-area visibility">
+                <select class="searchEngine">
+                    <option value="google">Google</option>
+                    <option value="amazon.in">Amazon.IN</option>
+                    <option value="amazon.com">Amazon.com</option>
+                    <option value="duckduckgo">DuckDuckGo</option>
+                    <option value="flipkart">Flipkart</option>
+                    <option value="wiki">Wikipedia EN</option>
+                </select>
+                <input type="text" class="search-text" placeholder="Search something..." onkeypress="triggerSearch(event)" />
+        </div>
+        <div class="section-container">
+            <div class="section" id="sec1"></div>
+            <div class="section" id="sec2"></div>
+            <div class="section" id="sec3"></div>
+            <div class="section" id="sec4"></div>
+            <div class="section" id="sec5"></div>
+        </div>
+        
+        <div class="nav-bar" onclick="showOptions()">
+             <div class="options-icon"></div>
+        </div>
+
+        <div class="menu">
+                <span class="menu-item" id="search-bar" onclick="changeDOM(0)">&nbsp;Search Bar</span>
+                <span class="menu-item" id="history" onclick="changeDOM(1)">&nbsp;Links</span> 
+                <span class="menu-item" id="history" onclick="toggleLight()">&nbsp;Lights</span> 
+                          
+        </div>
+
+    </body>
+</html>
+
+<style>
+</style>
+
+<script>
+show = false;
+menuItems = [{item: document.getElementsByClassName("menu-item")[0], selected: true},
+            {item: document.getElementsByClassName("menu-item")[1], selected:false},
+            {item: document.getElementsByClassName("menu-item")[2], selected:false}]; 
+domVisibilityArray = [true, true];
+hilightText = [true, true];
+lightsOn = false;
+selectedEngine = document.getElementsByClassName("selectedEngine")[0];
+searchText = document.getElementsByClassName("search-text")[0];
+storageJson={};
+this.getLocalStorage();
+function showOptions() {
+    let op = document.getElementsByClassName('menu')[0];
+    op.style.display= (show) ? "inline-block" : "none" ;
+    this.storageJson.show = false;
+    show = !show;
+}
+
+function changeDOM(classIndex) {
+    document.getElementsByClassName("visibility")[classIndex].style.display = (menuItems[classIndex].selected) ? 'block':'none';
+    menuItems[classIndex].item.style.backgroundColor = (menuItems[classIndex].selected) ? "white" : "rgb(20, 20, 20)";
+    menuItems[classIndex].item.style.color = (menuItems[classIndex].selected) ? "black" : "white";
+    
+    this.storageJson.menuItems = menuItems;
+    this.storageJson.domVisibilityArray = this.domVisibilityArray;
+
+    menuItems[classIndex].selected = !menuItems[classIndex].selected;
+    domVisibilityArray[classIndex] = !domVisibilityArray[classIndex];
+
+}
+
+function toggleLight() {
+    // let toggler = (lightsOn) ? ["grayscale(100%)", "0.5"] : ["none", "1"];
+    let a = document.getElementsByClassName("section");
+    // console.log(a);
+    let l = a.length;
+    if(lightsOn){
+        for( let x=0; x<l; x++) {
+            a[x].removeAttribute("style");
+        }
+        document.getElementsByTagName("select")[0].removeAttribute("style");//style.backgroundImage = "linear-gradient(90deg, black, #666)";
+        document.getElementsByTagName("select")[0].removeAttribute("style");
+        document.getElementsByClassName("search-text")[0].removeAttribute("style");
+    }
+
+    else {
+        for( let x=0; x<l; x++) {
+            a[x].style.filter = "none";
+            a[x].style.opacity = "1";
+        }
+        document.getElementsByTagName("select")[0].style.backgroundImage = "none";
+        document.getElementsByTagName("select")[0].style.color = "blue";
+        document.getElementsByClassName("search-text")[0].backgroundImage = "none";
+    }
+
+    menuItems[2].item.style.backgroundColor = (lightsOn) ? "rgb(20, 20, 20)" : "white";
+    menuItems[2].item.style.color = (lightsOn) ? "white" : "black";
+    this.storageJson.lightsOn = this.lightsOn;
+    this.lightsOn = !this.lightsOn;
+}
+
+
+function getLocalStorage() {
+    this.storageJson = localStorage.getItem('section-wallpaper-ptk') ? JSON.parse(localStorage.getItem('section-wallpaper-ptk')) :
+    {"show": show, "lightsOn": lightsOn,  "domVisibilityArray": domVisibilityArray, "hilightText": hilightText, selectedEngine: selectedEngine, "menuItems": menuItems }; 
+    
+    if(this.storageJson) {
+        lightsOn = this.storageJson.lightsOn;
+        show = this.storageJson.show;
+        domVisibilityArray = this.storageJson.domVisibilityArray;
+        hilightText = this.storageJson.hilightText;
+        selectedEngine = this.storageJson.selectedEngine;
+    }
+    this.showOptions();
+    this.changeDOM(0);
+    //this.changeDOM(1);
+    this.toggleLight();
+}
+
+function setLocalStorage() {
+    this.storageJson = {"show": false, "lightsOn": !lightsOn, "domVisibilityArray": [domVisibilityArray[0], domVisibilityArray[1]],
+    "hilightText": hilightText, selectedEngine: selectedEngine };
+    console.log(storageJson); 
+    localStorage.setItem('section-wallpaper-ptk', JSON.stringify(this.storageJson));
+}
+//this.changeDOM(0);
+window.onbeforeunload =  () => {
+    this.setLocalStorage();
+}
+
+function triggerSearch(event) {
+    if(event.keyCode === 13)
+    {
+        let searchWord = searchText.value.replace(/ /g, "+");
+        let engine = document.getElementsByClassName("searchEngine")[0].value;
+        console.log(engine);
+        let query;
+        switch(engine) {
+            case "google": 
+                query = "https://google.com/search?q="+searchWord;
+            break;
+
+            case "amazon.in":
+                query = "https://www.amazon.in/s?k="+searchWord;
+            break;
+
+            case "amazon.com":
+                query = "https://www.amazon.com/s?k="+searchWord;
+            break;
+
+            case "duckduckgo":
+                query = "https://duckduckgo.com/?q="+searchWord;
+            break;
+
+            case "flipkart":
+                query = "https://www.flipkart.com/search?q="+searchWord;
+            break;
+
+            case "wiki":
+                query = "https://en.wikipedia.org/wiki/Special:Search?search="+searchWord;
+            break;
+        }
+        window.location.href = query;
+    }
+}
+
+</script>

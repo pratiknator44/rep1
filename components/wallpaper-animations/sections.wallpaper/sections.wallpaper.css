@@ -1,0 +1,235 @@
+body, html {
+    margin: 0; 
+    padding: 0;
+}
+
+.section-container {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background-color: #000;
+    position: relative;
+    z-index: 1;
+}
+
+.section {
+    height: 100%;
+    width: 24.8%;
+    float:left;
+    border: solid 1px;
+    background-color: black;
+    background-origin: content-box;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    filter: grayscale(100%);
+    opacity: 0.5;
+    position: absolute;
+    z-index: 1;
+}
+
+#sec1 {
+    background-image: url('1.jpg');
+    clip-path: polygon(0 0, 71% 0, 100% 100%, 0% 100%);
+    -o-clip-path: polygon(0 0, 71% 0, 100% 100%, 0% 100%);
+    -webkit-clip-path: polygon(0 0, 71% 0, 100% 100%, 0% 100%);
+    -ms-clip-path: polygon(0 0, 71% 0, 100% 100%, 0% 100%);
+    animation: slide-up 0.5s linear;
+}
+
+@keyframes slide-up {
+    0% {
+        top:100%;
+        filter: none;
+        opacity: 1;
+    }
+    100% {
+        top:0%;
+        filter: none;
+    }
+}
+@keyframes slide-down {
+    0% {
+        bottom:100%;
+        filter: none;
+    }
+    100% {
+        bottom:0%;
+        filter: none;
+    }
+}
+
+
+
+.section:hover {
+    filter: none;
+    opacity: 1;
+    z-index: 2;
+}
+
+#sec2 {
+    background-image: url('2.jpg');
+    -o-clip-path: polygon(0 0, 72% 0, 100% 100%, 28% 100%);
+    -webkit-clip-path: polygon(0 0, 72% 0, 100% 100%, 28% 100%);
+    clip-path: polygon(0 0, 72% 0, 100% 100%, 28% 100%);
+    -ms-clip-path: polygon(0 0, 72% 0, 100% 100%, 28% 100%);
+    left:18%;
+    animation: slide-down 0.5s linear;
+}
+
+#sec3 {
+    background-image: url('3.jpg');
+    clip-path: polygon(0 0, 100% 0, 90% 100%, 28% 100%);
+    -o-clip-path: polygon(0 0, 100% 0, 90% 100%, 28% 100%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 90% 100%, 28% 100%);
+    -ms-clip-path: polygon(0 0, 100% 0, 90% 100%, 28% 100%);
+    left:36%;
+}
+
+#sec4 {
+    background-image: url('4.jpg');
+    clip-path: polygon(10% 0, 84% 0, 100% 100%, 0 100%);
+    -ms-clip-path: polygon(10% 0, 84% 0, 100% 100%, 0 100%);
+    -webkit-clip-path: polygon(10% 0, 84% 0, 100% 100%, 0 100%);
+    -o-clip-path: polygon(10% 0, 84% 0, 100% 100%, 0 100%);
+    left:58.5%;
+    animation: slide-down 0.5s linear;
+}
+#sec5 {
+    background-image: url('5.jpg');
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 18% 100%);
+    -ms-clip-path: polygon(0 0, 100% 0, 100% 100%, 18% 100%);
+    -o-clip-path:  polygon(0 0, 100% 0, 100% 100%, 18% 100%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 18% 100%);
+    left:79.5%;
+    animation: slide-up 0.5s linear;
+}
+
+.nav-bar {
+    height: 50px;
+    position: fixed;
+    top:0; left:0;
+    width: 100%;
+    z-index:5;
+}
+
+.nav-bar > i {
+    color:rgb(20, 20, 20);
+    font-size: 25px;
+    margin: 10px; 
+}
+.nav-bar > i:hover {
+    color:white;
+    font-size: 25px;
+    margin: 10px; 
+    cursor: pointer;
+}
+
+.menu {
+    width: 200px;
+    top: 50px;
+    left: 15px;
+    position: fixed;
+    background-color: black;
+    opacity: 1;
+    z-index: 3;
+    color: white;
+    display: none;
+}
+.menu > span {
+    height: 50px;
+    width:100%;
+    display: inline-block;
+    font-size: 25px;
+    vertical-align: middle;
+    background-color: rgb(20, 20, 20);
+    cursor: pointer;
+    margin-top:5px;
+    margin-left: 7px;
+    border: solid 1px black;
+    line-height: 2;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.menu > span:hover {
+    background-color: #666;
+    color: rgb(20, 20, 20);
+}
+
+.search-area {
+    height: auto;
+    width: 50%;
+    background-color: none;
+    top:50%; left: 25%;
+    position: absolute;
+    z-index: 5;
+}
+
+.search-area > select {
+    height: 50px;
+    min-height: 5vh; 
+    width: 20%;
+    font-size: 15px;
+    text-align-last: center;
+    border-top-left-radius: 20px;
+    border: none;
+    outline: 0;
+    background-image: linear-gradient(90deg, black, #666);
+    color: white;
+    cursor: pointer;
+}
+
+.search-area:hover ~ .section-container > .section{
+    filter: none;
+    opacity: 1;
+}
+.search-area:hover > select {
+    background-image: none;
+    color: blue;
+}
+.search-area:hover > input {
+    background-image: none;
+}
+
+option {
+    height: 50px;
+    background-color: white;
+    color: black;
+}
+
+.search-text {
+    height: 50px;
+    min-height: 5vh;
+    width: 80%;
+    display: inline-block;
+    float: right;
+    font-size: 15px;
+    border: none;
+    border-top-right-radius: 2.5vh;
+    border-bottom-right-radius: 2.5vh;
+    outline: 0;
+    background-image: linear-gradient(90deg, #CCC, white);
+    padding-left:5px;
+}
+
+.options-icon {
+    height: 20px;
+    width: 30px;
+    background-color: none;
+    margin:20px;
+    cursor: pointer;
+}
+.options-icon::before {
+    content: '';
+    position: absolute;
+    height: 2px; width: 30px;
+    background-color: white;
+    bottom:21px;
+}
+
+.options-icon::after {
+    content: '';
+    position: absolute;
+    height: 2px; width: 30px;
+    background-color: white;
+    bottom:14px;
+}

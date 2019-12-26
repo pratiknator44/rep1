@@ -1,0 +1,57 @@
+<html>
+    <body bgcolor="black">
+
+
+        <div class="oldAndroidLoaderContainer">
+
+        </div>
+    </body>
+</html>
+
+
+<style>
+    .oldAndroidLoaderContainer
+    {
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        background-color: none;
+        top:50%; margin-top:-50px;
+        left:50%; margin-left:-50px;
+        position: absolute;
+        background-color: #666;
+        border:solid 1px #CCC; 
+        animation: rotateIt 0.7s linear infinite; 
+    }
+
+    .oldAndroidLoaderContainer:before
+    {
+        content: "";
+        height:50px;
+        width:50px;
+        background-color: white;
+        left:50%; margin-left:-25px;
+        top:0%; margin-top:-10px;
+        position: absolute;
+        border-top-left-radius: 50px;
+        transform: rotate(45deg);
+    }
+
+    @keyframes rotateIt
+    {
+        from{ transform: rotate(0deg);}
+        to{transform: rotate(360deg)}
+    }
+
+    .oldAndroidLoaderContainer::after
+    {
+        content: "";
+        height:70px;
+        width:70px;
+        background-color: black;
+        left:50%; margin-left:-35px;
+        top:50%; margin-top:-35px;
+        position: absolute;
+        border-radius: 35px;
+    }
+</style>

@@ -1,0 +1,162 @@
+<html>
+    <head>
+        <title>Pratik Agarwal</title>
+        <link rel="stylesheet" type="text/css" href="css/resumeStyles.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    </head>
+    <body bgcolor="#F9F9F9">
+            <div class="standardBar" onmouseout="unDimLight();" style="z-index:999;">
+
+
+                <table class="options" border="0">
+                    <tr><td class="Opn" id="aboutOpn" onmouseover="undimAboutDetails()">About</td>
+                        <td class="Opn" id="myServiceOpn" onmouseover="undimSkills()" >Skills</td>
+                        <td class="Opn" id="resumeOpn" onclick="window.open('files/resume.Pratik.Agarwal.pdf')" onmouseover="dimInfoDiv()">Resume</td>
+                        <td class="Opn" id="personalOpn" onclick="window.open('http://tinyurl.com/kamegaame-ha')">Personal Work</td>
+                        <td class="Opn" id="contactOpn" onmouseover="undimWorkEx()">Service & Contact</tr>
+                </table>
+
+        <!-- for mobile screen -->
+                <div class="stdButtonMob" id="optionsButton" onclick="toggleMenu()">
+                    <div class="threeLines"></div>
+
+                </div>
+                
+                <table class="optionsMob" id="optionsTable"  cellspacing="0" cellpadding="0" >
+                    <tr class="tabOpn"><td id="aboutOpnMob">About Me</td></tr>
+                    <tr class="tabOpn" id="myServiceOpnMob"><td>My Service</td></tr>
+                    <tr class="tabOpn" id="resumeOpnMob"><td>Resume</td></tr>
+                    <tr class="tabOpn" id="personalOpnMob"><td>Personal Work</td></tr>
+                    <tr class="tabOpn" id="contactOpnMob"><td>Contact</td></tr>
+                </table>
+        <!-- for mobile screen ends -->
+            </div>
+
+            <div class="infoDiv" id="aboutDetails" style="">
+
+                        <div class="dpContainer" style="height:100px; width:100%; position:relative;">
+                            <div class="dp" style="height:100px; width:100px; border-radius:50%; background-color:aqua; left:50%; margin-left:-50px; margin-top:-20px; position:absolute;" id="profilePic1"></div>
+                        </div>
+                        
+                        <div class="labelDiv" style="width:100%; text-align:center;position:relative">
+                            <label style="width:100%; font-size:35px; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; color:gray;" id="">PRATIK AGARWAL</label>
+                            <br>
+                            <br>
+                            <label style="width:100%;color:#FF4561; font-family:Arial, Helvetica, sans-serif; width:100%; text-align:center;" id=""><strong>Full Stack Developer & UI Designer</strong></label>
+                        </div>
+                        <div class="discriptionPara">Hello. I am a Computer Engineer, currently working as a software developer in one of the reputed MNCs. I am a UI designer, UI developer, backend developer, gamer and a Videogame-desginer wanna-be.<br>
+                            Wanna play some lite games? goto my 
+                            
+                            <label style="color:crimson; cursor:pointer; text-decoration:underline;" onclick=window.open("http://tinyurl.com/kamegaame-ha")>website</label><br>
+                            Approach me on the social media
+                        </div>
+
+
+
+                        <div class="socailMediaIconContainer">
+                            <div class="socialMediaIconTray" style="width: 100px;height: auto; left:50%; margin-left:-50px;position: absolute;">
+                                <div class="socialMediaIcon" style="" id="linkedIn" onclick="window.open('https://www.linkedin.com/in/pratik-agarwal-5bb317139/')"></div>
+                                <div class="socialMediaIcon" id="facebook" onclick="window.open('http://facebook.com/accesspratik')"></div>
+                                <div class="socialMediaIcon" id="twitter" onclick="window.open('https://twitter.com/PratikSultanate')" ></div>
+                            </div>
+                        </div>
+                        <br><br>
+            </div>
+
+            <div class="infoDiv" id="skills" style="margin-left:1%;">
+                <div class="skillsLabelContainer">
+                    <br>
+                    &nbsp;Primary Skills in Programming & Softwares
+                </div>
+
+                <div class="skillsList">
+                    <ul>
+                        <li class="pskill">Angular 6</li>
+                        <li class="pskill">JavaScript</li>
+                        <li class="pskill">CSS3</li>
+                        <li class="pskill">JQuery</li>
+                        <li class="pskill">Java SE 7</li>
+                        <li class="pskill">IBM Integration Bus</li>
+                    </ul>
+                </div>
+                <div class="skillsLabelContainer">
+                        <br>
+                    &nbsp;Also worked upon
+                </div>
+                <div class="skillsList">
+                        <ul>
+                            <li class="pskill">PHP</li>
+                            <li class="pskill">SQL</li>
+                            <li class="pskill">Python</li>
+                            <li class="pskill">C</li>
+                            <li class="pskill">ActionScript 3</li>
+                            <li class="pskill">Hibernate</li>
+                        </ul>
+                </div>
+                
+
+                <div class="skillsLabelContainer">
+                        <br>
+                    &nbsp;Softwares, Servers and IDEs
+                </div>
+                <div class="skillsList">
+                        <ul>
+                            
+                            <li class="pskill">Eclipse Juno</li>
+                            <li class="pskill">Microsoft Visual Studio Code</li>
+                            <li class="pskill">Adobe Flash CS6</li>
+                            <li class="pskill">WAMP Server</li>
+                            <li class="pskill">Apache 7 Server on Eclipse</li>
+                            <li class="pskill">Android Studio</li>
+                            <li class="pskill">Microsoft Visual Studio</li>
+                        </ul>
+                </div>
+
+
+            </div>
+            <div class="infoDiv" id="workEx" style="margin-left: 1%;">
+                    <div class="skillsLabelContainer">
+                            <br>
+                        &nbsp;Current Designation & Workplace
+                    </div>
+
+                    <div class="skillsList">
+                        &nbsp;<label class="pskill">Systems Engineer at Infosys Limited<br>
+                        &nbsp;1year 6 months</label>    
+                        
+                    </div>
+                    <p></p>
+                    <div class="skillsLabelContainer">
+                        <br>
+                    &nbsp;Personal Information & Contact
+                    </div>
+                    <div class="skillsList" id="contactContainer">
+                        <ul>
+                            
+                            <li class="pskill">Current City: BANGALORE, Karnataka</li>
+                            <li class="pskill"><a style="text-decoration: none;" href="mailto:pratikandroid23@gmail.com?Subject=Hello%20Pratik" target="_top">pratikandroid23@gmail.com</a></li>
+                            <li class="pskill">800-532-7478, 97-4243-8550</li>
+                            <li class="pskill">DOB: February 10th, 1994</li>
+                            <li class="pskill">Native of: ALLAHABAD, Uttar Pradesh</li>
+                        </ul>
+                    </div>
+                    <div class="outerLoaderBar" style="height: 10px; width: 50%; margin-left:25%; border-radius: 5px; background-color:lavender;">
+                            <div class="innerLoaderBar" style="height: 100%; width: 0%; border-radius: 5px; background-color:limegreen;color:white; font-family:Courier New, Courier, monospace; font-size:10px; text-align:center; 
+                            ">1.5 years   </div>
+                    <br>
+                
+                    
+                
+                <br>
+            </div>
+
+    </body>
+
+</html>
+<style>
+
+</style>
+<script src="js/resumeScript.js"></script>
+	
+	
+	

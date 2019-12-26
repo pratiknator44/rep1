@@ -1,0 +1,43 @@
+<html>
+    <body>
+        <div class="progressBarLoaderContainer">
+
+            <div class="progress"></div>
+
+
+
+
+        </div>
+    </body>
+</html>
+
+<style>
+    .progressBarLoaderContainer
+    {
+        height: 15px;
+        width: 25%;
+        background-color: #EAEAE8;
+        top:50%; margin-top: -15px;
+        left:37.5%;
+        position: fixed;
+        border-radius: 15px;
+    }
+
+    .progress
+    {
+        height: 100%;
+        width: 20%;
+        border-radius: 25px;
+        background-color: rgb(47, 172, 255);
+        position: absolute;
+        animation: animateProgress 0.5s linear infinite;
+        animation-direction: alternate-reverse;
+    }
+
+    @keyframes animateProgress
+    {
+        from{ margin-left: 0%;}
+        to{margin-left: 80%;}
+    }
+
+</style>

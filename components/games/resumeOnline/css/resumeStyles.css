@@ -1,0 +1,384 @@
+html,body
+{
+        margin:0px; 
+        padding:0px;
+        overflow: hidden;
+}
+.standardBar
+{
+        position: fixed;
+        height: 50px; width: 100%;
+        top:0px; right: 0px;
+}
+
+.infoDiv
+{
+        width: 30%;
+        min-height:30px;
+        height: 80%;
+        margin-left:1px;
+        background-color:white;
+        margin-top:120px;
+        display: inline-block;
+        float: left;
+        position: relative;
+        z-index: 99;
+}
+
+#aboutDetails
+{
+    margin-left: 4%;
+}
+
+#workEx, #skills
+{
+    margin-left: 1%;
+}
+
+.dp
+    {
+        background-image: url('../img/dp.jpg');
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+
+    .skillsLabelContainer
+    {
+        width: 100%;
+        height: 40px;
+        position: relative;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        text-align: left;
+    }
+
+    .pskill
+    {
+        color: #666;
+        font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+        cursor: pointer;
+    }
+
+    .pskill:hover
+    {
+        text-decoration: underline;
+    }
+
+    
+.socialMediaIcon
+{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: green;
+    display: inline-block;
+    margin:0px;
+    padding:0px;
+    opacity: 0.8;
+    cursor: pointer;
+    background-size: contain;
+    background-position: center;
+}
+.socialMediaIcon:hover
+{
+    opacity: 1;
+}
+
+.socailMediaIconContainer
+{
+    margin-top:15px;
+    width: 100%;
+    position: relative;
+}
+.socialMediaIconTray
+{
+    width: 140px; height: auto;
+    left:50%;
+    margin-left:-70px;
+    position: absolute;
+}
+
+#linkedIn
+{
+    background-image: url('../img/linkedIn.jpg');
+}
+#facebook
+{
+    background-image: url('../img/fb.jpg');
+}
+#twitter
+{
+    background-image: url('../img/twitter.jpg');
+}
+
+    .options
+    {
+        height: 80px;
+        width: 80%;
+        margin-left: 10%;
+    }
+    #aboutOpn
+    {
+        background-color: #084D8E;
+        color: white;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    #aboutOpn:hover
+    {color: #084D8E;      background-color: white;}
+
+    #myServiceOpn
+    {
+        background-color: #1164B2;
+        color: white;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    #myServiceOpn:hover
+    {
+        color: #1164B2;
+        background-color: white;
+    }
+
+    #resumeOpn
+    {
+        background-color: #1372CB;
+        color: white;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    #resumeOpn:hover
+    {
+        color: #1372CB;
+        background-color: white;
+    }
+
+    #personalOpn
+    {
+        background-color: #157EE1;
+        color: white;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    #personalOpn:hover
+    {
+        color: #157EE1;
+        background-color: white;
+    }
+
+    #contactOpn
+    {
+        background-color: #2C90EE;
+        color: white;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    #contactOpn:hover
+    {
+        color: #2C90EE;
+        background-color: white;
+    }
+
+
+    .Opn
+    {
+        text-align: center;
+        cursor: pointer;
+        box-shadow: 5px 5px 5px 5px #888888;
+    }
+    #optionsTable
+    {display: none;}
+
+
+.discriptionPara    
+{
+    margin-top:15px;
+    word-wrap: break-word;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 15px;
+    text-align: left;
+    color: #666;
+    width: 90%;
+    margin-left: 5%;
+
+}
+
+@media only screen and (max-width:1280px)
+{
+    html,body
+    {
+        margin:0px; 
+        padding:0px;
+        overflow-y:scroll;
+    }
+    .infoDiv
+    {
+        display: block;
+        width: 100%;
+        margin-left: 0px;
+        position: relative;
+        height: auto;
+    }
+
+    .options
+    {display: none;}
+    .stdButtonMob
+    {
+        position: fixed;
+        background-color: none;
+        border: 2px solid #CCC; border-radius: 0%;
+        color: white;
+        height:50px; width: 50px;
+        vertical-align: middle; text-align: center;
+        cursor: pointer;
+        top: 0px;
+        position: relative;
+    }
+    .stdButton:hover
+    {
+        background-color: white;
+        color: black;
+    }
+    
+
+    .threeLines:before
+    {
+        content: "";
+        height:3px; width:30px; 
+        background-color:#666;
+        top:50%; left:50%; 
+        margin-left:-15px; margin-top:-9px; 
+        position: absolute;
+    }
+
+    .threeLines
+    {
+        height:3px; width:30px; 
+        background-color:#666; 
+        top:50%; left:50%; 
+        margin-left:-15px; margin-top:0px; 
+        position: absolute;
+    }
+
+    .threeLines:after
+    {
+        content: "";
+        height:3px; width:30px; 
+        background-color:#666;
+        top:50%; left:50%; 
+        margin-left:-15px; margin-top:5px; 
+        position: absolute;
+    }
+
+    #aboutDetails
+{
+    margin: 0; padding: 0;
+    margin-top:20px;
+}
+
+#workEx, #skills
+{
+    margin: 0;
+    padding: 0;
+}
+
+    .innerLoaderBar
+    {
+        animation-name: animateWorkXp;
+        animation-duration: 4s;
+    }
+
+
+    @keyframes animateWorkXp
+    {
+        from{width: 0%;}
+        to{width: 62.5%}
+    }
+
+    
+
+
+    #optionsTable
+    {
+        height: 50%;
+        background-color: white;
+        position: absolute;
+        width: 30%;
+        top:60px;
+        cursor: pointer;
+        display: none;
+    }
+    
+    .tabOpn
+    {
+        background-color: black;
+        color: white;
+        height: 50px;
+        border:none;
+        text-align: center;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    }
+    .tabOpn:hover
+    {
+        background-color: white;
+        color: black;
+    }
+
+        /* -----------------------------------------------------------------------------------------------------------*/
+
+    #aboutOpnMob
+    {
+        background-color: #084D8E;
+        color: white;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    #aboutOpnMob:hover
+    {color: #084D8E;      background-color: white;}
+
+    #myServiceOpnMob
+    {
+        background-color: #1164B2;
+        color: white;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    #myServiceOpnMob:hover
+    {
+        color: #1164B2;
+        background-color: white;
+    }
+
+    #resumeOpnMob
+    {
+        background-color: #1372CB;
+        color: white;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    #resumeOpnMob:hover
+    {
+        color: #1372CB;
+        background-color: white;
+    }
+
+    #personalOpnMob
+    {
+        background-color: #157EE1;
+        color: white;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    #personalOpnMob:hover
+    {
+        color: #157EE1;
+        background-color: white;
+    }
+
+    #contactOpnMob
+    {
+        background-color: #2C90EE;
+        color: white;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    #contactOpnMob:hover
+    {
+        color: #2C90EE;
+        background-color: white;
+    }
+}
+

@@ -1,0 +1,34 @@
+<html>
+    <body>
+        <link href="radio-0-styles.css" type="text/css" rel="stylesheet" />
+        Select a gender: <br>
+        <div class="radio-0-container">
+            <label class="radio-label">
+                <input type="radio" name="gender" value="male" class="gender-radio" /> 
+                <span class="custom-radio"></span>
+                Male
+            </label>
+            <label class="radio-label">
+                <input type="radio" value="female" name="gender" class="gender-radio" />
+                <span class="custom-radio"></span>
+                Female
+            </label>
+            <label class="radio-label">
+            <input type="radio" value="other" name="gender" class="gender-radio" />
+            <span class="custom-radio"></span>
+            Other
+            </label>
+    </div>
+    </body>
+</html>
+
+<!--
+    1. create the normal template...
+    2. Now display the radio buttons none
+    3. Now capture the radio check event in CSS
+    4. but before that, lets make the radio that needs to be displayed
+    5. Now, capture the check event in CSS...
+
+    6. by capturing the event from parent radio-label, we can get the check event while clicking
+    on the label as well.
+-->

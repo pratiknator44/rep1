@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <title>LOX (Liquid Oxygen)</title>
+        <script src="js/jq.js" type="text/javascript"></script>
+        <script src="js/LOXscript.js" type="text/javascript"></script>
+        <link rel="stylesheet" type="text/css" href="css/LOXstyle.css">
+    </head>
+
+    <body>
+        <div class="container">
+
+            <div class="statusBar">
+                <div class="healthContainer" style="left:20px;">
+                    <div class="health" id="health" style="background-color: red;">100</div>
+                </div>
+                <div class="missileInfo" style="overflow:hidden;height:28px; width:auto; left:350px; position: absolute; display:inline-block; font-family: 'Courier New', Courier, monospace;"><img src="img/missileLogo.png" style="height: 28px; width: 28px;" /><label class="noOfMissiles">5</label></div>
+                <div class="scoreInfo" style="overflow:hidden;height:20px; border-radius: 10px; width:auto; left:450px; background-color: white; position: absolute; display:inline-block; font-family: 'Courier New', Courier, monospace; font-size:15px;">Score: <label class="score">0</label></div>
+
+
+
+                <div class="healthContainer" style="float:right; margin-right: 20px;">
+                        <div class="fuel" id="fuel" style="background-color: green;" s>100</div>
+                </div>
+            </div>
+
+            <div class="gameOver" id="gameOver">
+                <div class="gameOverLabel">GAME OVER</div>
+                <br>
+                You ran out of fuel!<br>score<br>
+                <label class="scoreDisplay gameOverLabel" style="color: royalblue">0</label>
+                <br>
+                <button class="restart" onclick="startGameLOX()"></button>
+            </div>
+
+            <div class="gameOver" id="gameStart">
+                <div class="gameOverLabel">LOX</div>version 1 alpha
+                <br>
+                <label class="gameDiscription">Press < A > and < D > for moving the player, click on enemy to shoot bullets, right click to shoot missiles! <br>*mute*</label>
+                <br><br>
+                <button class="startGame" id="startGame" onclick="startGameLOX()">GO!</button>
+                <div class="credits"><label style="float:left;">LOX <strong>Liquid Oxygen</strong></label>
+                    <label style="float:right;"></label></div>
+            </div>
+
+
+
+            <div class="crossheir"></div>
+            <div class="player"></div>
+        </div>
+        
+
+
+
+
+
+
+
+        
+    </body>
+
+</html>

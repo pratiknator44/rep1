@@ -1,0 +1,61 @@
+<html>
+    <body>
+        <div class="clockLoaderContainer">
+
+        </div>
+    </body>
+</html>
+<style>
+    .clockLoaderContainer
+    {
+        height: 150px;
+        width: 150px;
+        border-radius: 50%;
+        background-color: #ECECEC;
+        border:solid 7px #666666;
+        top:50%; margin-top:-75px;
+        left:50%; margin-left: -75px;
+        position: fixed;
+    }
+
+    .clockLoaderContainer:before    /* minute hand */
+    {
+        content: "";
+        background-color: black;
+        height: 70px;
+        width: 10px;
+        left: 50%;margin-left: -5px;
+        top:50%; margin-top:-70px;
+        position: absolute;
+        border-radius: 75%;
+        transform: rotate(0deg);
+        transform-origin: bottom;
+        animation: animateHands 1s linear infinite;
+    }
+
+    
+    .clockLoaderContainer:after /* hour hand */
+    {
+        content: "";
+        background-color:black;
+        height: 50px;
+        width: 10px;
+        left: 50%;margin-left: -5px;
+        top:50%; margin-top:-50px;
+        position: absolute;
+        border-radius: 75%;
+        transform: rotate(0deg);
+        transform-origin: bottom;
+        animation: animateHands 5s linear infinite;
+    }
+
+    @keyframes animateHands
+    {
+        from{transform: rotate(0deg);}
+        to{transform: rotate(360deg)}
+    }
+
+
+
+
+</style>

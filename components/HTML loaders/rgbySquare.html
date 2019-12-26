@@ -1,0 +1,80 @@
+<html>
+    <body bgcolor="black">
+        <div class="circularDotContainer">
+            <div class="circleDot"></div>
+            <div class="circleDot"></div>
+            <div class="circleDot"></div>
+            <div class="circleDot"></div>
+        </div>
+    </body>
+</html>
+
+<style>
+    .circularDotContainer
+    {
+        height: 100px;
+        width: 100px;
+        border:none;
+        position: relative;
+        top:50%; left:50%;
+        margin-left:-50px; margin-top:-50px;
+        background-color: transparent
+    }
+
+    .circleDot
+    {
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+        background-color: red;
+        position: absolute;
+        animation: moveDot 2s linear infinite;
+    }
+
+    .circleDot:nth-child(2)
+    {
+        animation-delay: 0.5s;
+        background-color: blue;
+    }
+    
+    .circleDot:nth-child(3)
+    {
+        animation-delay: 1s;
+        background-color: green;
+    }
+    
+    .circleDot:nth-child(4)
+    {
+        animation-delay: 1.5s;
+        background-color: yellow;
+    }
+
+    @keyframes moveDot
+    {
+        0%{
+            left:0%;
+        }
+
+        25%{
+            top:0%;
+            left:80%;
+        }
+
+        50%{
+            top:80%;
+            left:80%;
+
+        }
+        75%{
+            top:80%;
+            left:0%;
+        }
+
+        100%{
+            top:0%;
+            left:0%;
+        }
+
+    }
+
+</style>

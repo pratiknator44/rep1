@@ -1,0 +1,81 @@
+<html>
+    <body>
+        <div class="loadingBallBounceContainer">
+            <div id="l" class="loadingCharacter">L</div>
+            <div id="o" class="loadingCharacter">O</div>
+            <div id="a" class="loadingCharacter">A</div>
+            <div id="d" class="loadingCharacter">D</div>
+            <div id="i" class="loadingCharacter">I</div>
+            <div id="n" class="loadingCharacter">N</div>
+            <div id="g" class="loadingCharacter">G</div>
+
+        </div>
+    </body>
+</html>
+<style>
+
+
+.loadingBallBounceContainer
+{
+    height: 50%;
+    width: 300px;
+    background-color: aqua;
+    top:25%; left:50%;
+    margin-left:-150px; margin-top:-30px;
+    position: relative;
+}
+
+.loadingCharacter
+{
+    height: 40px;
+    width: 40px;
+    margin-top:40px;
+    background-color: yellow;
+    float:left;
+    font-family: sans-serif;
+    font-size:40px;
+    text-align: center;
+}
+
+.loadingCharacter:nth-child(1)
+{
+    transform: rotate(-15deg);
+}
+
+.loadingCharacter:nth-child(3)
+{
+    transform: rotate(-5deg);
+}
+
+.loadingCharacter:nth-child(4)
+{
+    transform:rotate(10deg);
+}
+.loadingCharacter:last-child
+{
+    transform: rotate(-15deg);
+}
+
+#l:hover
+{
+    animation: fallCharacter 3s linear infinite;
+}
+
+@keyframes fallCharacter
+{
+    0%{
+    }
+
+    25%{
+        transform: rotate(135deg);
+        margin-top:0px;
+    }
+
+    100%{
+        transform: rotate(1800deg);
+        margin-top:100%;
+    }
+}
+
+
+</style>

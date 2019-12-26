@@ -1,0 +1,257 @@
+ body{
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        overflow: hidden;
+        cursor: none;
+    }
+
+    .statusBar
+    {
+        height: 30px;
+        width:  100%;
+        top: 0px;
+        position: absolute;
+        background-color: none;
+    }
+
+    .healthContainer
+    {
+        height: 15px;
+        width: 200px;
+        background-color: #CCC;
+        position: relative;
+        top:5px;
+        border-radius: 7.5px;
+        color: white;
+        text-align: center;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 12px;
+        display: inline-block;
+    }
+
+    .health
+    {
+        height: 100%;
+        max-width: 100%;
+        width: 100%;
+        border-radius:15px;
+    }
+
+    .fuel
+    {
+        height: 100%;
+        width: 100%; max-width: 100%;
+        border-radius:15px;
+    }
+
+    .container
+    {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        position: relative;
+        background-color: cornflowerblue;
+    }
+    .crossheir
+    {
+        height: 40px;
+        width: 40px;
+        border-radius: 20px;
+        /*background-color: black; */
+        background-image: url('img/crossheir.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        z-index: 1;
+        position: absolute;
+    }
+    .player
+    {
+        height: 100px;
+        width: 353px;
+        bottom:100px;
+        left:30%;
+        position: absolute;
+        background-image: url('img/planeDefault.png');
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        /*border:solid 1px black;*/
+        /*animation: bendLeft 0.5s forwards;*/
+        animation: regularMovement 1s;
+        animation-iteration-count: 100;
+        animation-direction: alternate-reverse;
+        z-index: 1;
+    }
+
+    .bullet
+    {
+        height: 10px;
+        width: 10px;
+        bottom:100px;
+        border-radius: 5px;
+        background-color: black;
+        position: absolute;
+    }
+
+    .missile
+    {
+        height: 40px;
+        width: 40px;
+        bottom:100px;
+        border-radius: 5px;
+        background-image: url('img/missile.png');
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: absolute;
+    }
+
+    .enemy
+    {
+        height: 10px;
+        width: 35.3px;
+        position: absolute;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        top: 50px;
+    }
+
+    .brute
+    {
+        background-image: url('img/brute.png');
+    }
+
+    .knight
+    {
+        background-image: url('img/knight.png');
+    }
+
+    .guard
+    {
+        background-image: url('img/guard.png');
+    }
+
+    .ambulance
+    {
+        background-image: url('img/ambulance.png');
+    }
+
+    .enemyHealth
+    {
+        width: 100%;
+        height: 2px;
+        background-color: red;
+    }
+
+    @keyframes bendLeft
+    {
+        from{transform: rotate(0deg);}
+        to{transform: rotate(-15deg);}
+    }
+
+    @keyframes bendRight
+    {
+        from{transform: rotate(0deg);}
+        to{transform: rotate(15deg);}
+    }
+
+    @keyframes bendFromLeft
+    {
+        from{transform: rotate(-15deg);}
+        to{transform: rotate(0deg);}
+    }
+
+    @keyframes bendFromRight
+    {
+        from{transform: rotate(15deg);}
+        to{transform: rotate(0deg);}
+    }
+
+    @keyframes regularMovement
+    {
+        from{bottom:100px;}
+        to{bottom: 85px;}
+    }
+
+     .gameOver, .gameStart
+    {
+        height: 50%;
+        width: 50%;
+        margin-top:12.5%;
+        margin-left:25%;
+        background-color:lightblue;
+        position: absolute;
+        text-align: center;
+        display: none;
+        z-index: 1;
+    }
+
+        .gameOverLabel
+    {
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif, Courier, monospace;
+        font-size: 75px;
+    }
+
+    .restart
+    {
+        height: 100px;
+        width: 100px;
+        border-radius: 50px;
+        border:none;
+        cursor: pointer;
+        left: 30%;
+        background-color: teal;
+        background-image: url('../img/restartButtonBG.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: auto;
+
+    }
+
+    .startGame
+    {
+        height: 100px;
+        width: 100px;
+        border-radius: 50px;
+        border:none;
+        cursor: pointer;
+        left: 30%;
+        background-color: teal;
+        text-align: center;
+        color: white;
+    }
+
+    .startGame:hover
+    {
+        font-size: 20px;
+    }
+
+    .gameDiscription
+    {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: teal;
+        color: white;
+    }
+
+    .restart:hover
+    {
+        animation: rotateRestart 1s;
+    }
+
+    @keyframes rotateRestart
+    {
+        from{transform: rotate(0deg);}
+        to {transform: rotate(360deg);}
+    }
+
+    .credits
+    {
+        bottom: 0px;
+        width: 100%;
+        background-color: aliceblue;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        height: 30px;
+        position: absolute;
+    }

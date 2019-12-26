@@ -1,0 +1,89 @@
+<html>
+    <body>
+
+        <div class="fourDotsIconContainer">
+        
+            <div class="innerDots"></div>
+
+
+
+
+
+        </div>
+    </body>
+</html>
+
+<style>
+.fourDotsIconContainer
+{
+    height: 100px;
+    width:100px;
+    left:50%; top:50%;
+    margin-left:-50px; margin-top:-50px;
+    position: absolute;
+    background-color: aqua;    
+}
+
+.fourDotsIconContainer::before
+{
+    content: "";
+    background-color: yellow;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    position: absolute;
+    top:65px; left:20px;
+    animation: toAndFroBefore1 1s alternate-reverse ease-in-out infinite;
+}   
+
+.fourDotsIconContainer::after
+{
+    content: "";
+    background-color: red;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    position: absolute;
+    top:20px; left:60px;
+}
+
+@keyframes toAndFroBefore1
+{
+    from{top:65px; left:20px;}
+    to{top:40px; left:45px}
+}
+
+
+@keyframes toAndFroBefore2
+{
+    from{top:20px; left:60px;}
+    to{top:65px; left:20px}
+}
+
+
+
+.innerDots
+{
+    background-color: #06F;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    position: absolute;
+    top:20px; left:20px;
+}
+
+
+.innerDots::before
+{
+    content: "";
+    background-color: yellowgreen;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    position: absolute;
+    top:45px; left:40px;
+}
+
+
+
+</style>

@@ -1,0 +1,76 @@
+<html>
+    <head>
+        <title>IsoButane</title>
+        <script src="js/jq.js"></script>
+        <script src="js/IsoButaneScript.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/n-butaneStyle.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="scoreboard">
+                <table class="socreboardTable" border="0">
+                    <tr>
+                        <td class="lives"></td>
+                        <td class="livesValue">x0</td>
+                        <td class="scoreLabel">Score</td>
+                        <td class="scoreValue">00</td>
+                        <td></td>
+                        <td class="scoreLabel">Velocity</td>
+                        <td class="velocityValue">1</td>
+                        <td class="audioSwitch"></td>
+                    </tr>
+
+
+                </table>
+
+
+
+            </div>
+            <div class="bird"></div>
+            <div id="blockTop" class="block"></div>
+            <div id="blockBottom" class="block"></div>
+
+            <div class="gameOver" id="gameOver">
+                <div class="gameOverLabel">GAME OVER</div>
+                <br>
+                score<br>
+                <label class="scoreDisplay gameOverLabel" style="color: royalblue">0</label>
+                <br>
+                <button class="restart"></button>
+            </div>
+            <div class="gameOver" id="gameStart">
+                <div class="gameOverLabel">FLAPPY BIRD</div>
+                <br>
+                <label class="gameDiscription">Press SPACE to make the birdie pass from the gap between the blocks, like you do in FLAPPY BIRD!  </label>
+                <br><br>
+                <button class="startGame" id="startGame" onclick="gameStart">GO!</button>
+                <div class="credits"><label style="float:left;">Iso- <strong>Butane</strong></label>
+                    <label style="float:right;"> &nbsp;background score: <strong>Spring</strong> by Vivaldi &nbsp;</label></div>
+            </div>
+
+            <!-- background settings-->
+            <div class="moon">
+            <div class="darkOfMoon"></div>
+            </div>
+            <marquee direction="left" behaviour="scroll"><div class="cloud" id="cloud1"></div></marquee>
+            
+               
+        
+
+            <!-- background settings end-->
+        </div>
+
+        <div class="city2"></div>
+        <div class="city"></div>
+
+
+        <audio class="backgroundAudio" id="myAudio">
+            <source src="bgScore/spring.mp3" type="audio/mpeg">
+          </audio>
+
+    </body>
+</html>
+
+<style>
+    
+</style>

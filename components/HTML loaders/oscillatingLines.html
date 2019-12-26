@@ -1,0 +1,85 @@
+<html>
+    <body bgcolor="blue">
+
+        <div class="oscilationLineContainer">
+            <div class="oscilationLine"></div>
+            <div class="oscilationLine"></div>
+            <div class="oscilationLine"></div>
+            <div class="oscilationLine"></div>
+            <div class="oscilationLine"></div>
+
+        </div>
+    </body>
+</html>
+
+<style>
+    .oscilationLineContainer
+    {
+        height: 50px;
+        width: 110px;
+        border:none;
+        position: relative;
+        top:50%; left:50%;
+        margin-left:-55px; margin-top:-25px;
+        background-color: blue;
+    }
+
+    .oscilationLine
+    {
+        height: 20px;
+        width: 5px;
+        background-color: white;
+        position: absolute;
+        top:25px; left:10px;
+        animation: oscilationPath 1s linear infinite;
+    }
+
+    .oscilationLine:nth-child(2)
+    {
+        left: 16px;
+        animation-delay: 0.10s;
+    }
+
+    .oscilationLine:nth-child(3)
+    {
+        left: 22px;
+        animation-delay: 0.2s;
+    }
+
+    .oscilationLine:nth-child(4)
+    {
+        left: 28px;
+        animation-delay: 0.3s;
+    }
+
+    .oscilationLine:nth-child(5)
+    {
+        left: 34px;
+        animation-delay: 0.4s;
+    }
+
+    @keyframes oscilationPath
+    {
+        0%{
+            top:25px;
+        }
+
+        25%{
+            top:30px;
+        }
+
+        50%{
+            top:25px;
+        }
+
+        75%{
+            top:20px;
+        }
+
+        100%{
+            top:25px;
+        }
+    }
+	
+	
+	

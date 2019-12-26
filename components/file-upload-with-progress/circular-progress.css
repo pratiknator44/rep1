@@ -1,0 +1,36 @@
+.file-upload-container {
+    height: 300px;
+    width: 300px;
+    /* border: solid 1px red; */
+    margin-top: 25%;
+    margin-left: calc(50% - 150px);
+}
+
+.upload-file {
+    display: none;
+}
+
+.upload-button {
+    height: 50px;
+    width: 150px;
+    background-color: lightcoral;
+    font-size: 20px; color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.progress-container {
+    height: 20px;
+    width: 100%;
+    background-color: #CCC;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    width: 37.65%;
+    background-image: linear-gradient(90deg, yellow,red);
+    border-radius: 10px;
+}

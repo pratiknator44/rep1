@@ -1,0 +1,154 @@
+body, html {
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.contents {
+    background-color: #EEE;
+    width: 100%; height:100%;
+    transform-origin: 0% 0%;
+    z-index: 5;
+    position: absolute; top:0; left:0;
+    background-image: url("https://ak1.ostkcdn.com/wp-content/uploads/2017/06/Coffee-Pot-HERO.jpg");
+    background-attachment: local;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* transform: rotate(-30deg); */
+}
+
+.menu {
+    position: absolute;
+    top:40%; left:10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    z-index: 4;
+}
+.menu > label {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    color: white;
+}
+.options-tab {
+    font-size: 25;
+    cursor: pointer;
+    width: 100vw;
+    color: white;
+}
+
+td:hover {
+    background-color: rgb(90, 50, 57);
+    color: white;
+}
+
+.menu-icon {
+    height: 35px;
+    width: 35px;
+    position: absolute; top:10px; left: 10px;
+    border: solid 1px #aaaaaa; border-radius: 50%;
+    z-index: 10;
+    cursor: pointer;
+}
+@keyframes expose-menu-anim {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-30deg);
+    }
+    
+}
+
+.fw-anim {
+    animation: expose-menu-anim 1s forwards;
+}
+.rev-anim {
+    animation: expose-menu-anim 1s reverse;
+}
+
+@font-face {
+  font-family: myCursiveFont;
+  src: url(mycursive.ttf);
+}
+
+.just-for-bg {
+    width: 100%; height: 100%;
+    top:0; left:0;
+    filter: blur(8px);
+    background-image: url('https://assets.bonappetit.com/photos/5c366551f212512d0e6cefd0/16:9/w_2560%2Cc_limit/Basically-Coffee-0219-03.jpg');
+    z-index: 0;
+}
+
+.heading-label {
+    width: 100%;
+    margin-top: 10%;
+    font-size: 100px;
+    color: whitesmoke;
+    font-family: myCursiveFont;
+    text-align: center;
+}
+
+.discription {
+    align-content: center;
+    margin-top: 20px;
+    width: 100%; height: 80%; display: block;
+}
+
+.order-button {
+    width: 300px;
+    height: 75px;
+    background-color: rgb(189, 73, 92);
+    color: whitesmoke;
+    font-size: 25px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-top: 150px;
+    margin-left: calc(50% - 150px);
+    outline: none;
+}
+.order-button:hover {
+    background-color: rgb(204, 94, 112);
+
+}
+.show-more-text {
+    color: #06F;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-decoration: none;
+    font-size: 14px;
+    margin-left: 5px;
+    font-weight: 200;
+    cursor: pointer;
+}
+.show-more-text:hover {
+    text-decoration: underline;
+}
+.quick-add-menu-label {
+    position: absolute;
+    top:50%; left:-150px;
+    transform: rotate(90deg);
+    font-family: myCursiveFont;
+    font-size: 60px;
+    color: rgb(204, 201, 201);
+    cursor: pointer;
+}
+
+.quick-add-menu-label:hover {
+    color: whitesmoke;
+
+}
+
+.full-menu-container {
+    height: 95%; width: 95%;
+    margin-top: 2.5%; margin-left: 2.5%;
+    border: double 4px white;
+}
+
+.align-center {
+    text-align: center;
+}
+
+.add-sub-label {
+    cursor: pointer;
+    font-weight: bold;
+}

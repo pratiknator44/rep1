@@ -1,0 +1,93 @@
+<html>
+    <body>
+        <div class="bookContainer">
+            <div class="leftPage"></div>
+            <div class="rightPage"></div>
+            <div class="page"></div>
+            <div class="page"></div>
+            <div class="page"></div>
+            <div class="page"></div>
+            <div class="page"></div>
+
+        </div>
+    </body>
+</html>
+
+<style>
+    .bookContainer
+    {
+        height: 150px;
+        width:300px;
+        border: solid 1px black;
+        position: absolute;
+        top:50%; left:50%;
+        margin-left:-150px; margin-top:-75;
+    }
+
+    .leftPage
+    {
+        height: 70px;
+        width: 50px;
+        border:solid 5px #06C;
+        position: absolute;
+        top:40px; left:95px;
+        border-right: none;
+    }
+
+    .rightPage
+    {
+        height: 70px;
+        width: 50px;
+        border:solid 5px #06F;
+        position: absolute;
+        top:40px; right:95px;
+        border-left: none;
+    }
+
+    .page
+    {
+        height: 70px;
+        width: 50px;
+        border:solid 1px #06F;
+        position: absolute;
+        top:45px; right:97.5px;
+        border-left: solid 1px #06F;
+        animation: flipPage 2.5s ease-in-out infinite;
+        perspective: 200px;
+        transform-origin: left;
+        background-color: whitesmoke;
+        color: black; font-size: 13px;
+    }
+
+    .page:nth-child(2)
+    {
+        animation-delay: 0.5s;
+        background-color: red;
+    }
+
+    .page:nth-child(3)
+    {
+        animation-delay: 1s;
+    }
+
+    .page:nth-child(4)
+    {
+        animation-delay: 2s;
+    }
+    .page:nth-child(5)
+    {
+        animation-delay: 2.5s;
+    }
+
+    @keyframes flipPage
+    {
+        0%{
+            transform: rotateY(0deg);
+        }
+
+        100%{
+            transform: rotateY(-180deg);
+        }
+    }
+
+</style>

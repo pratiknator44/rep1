@@ -1,0 +1,84 @@
+<html>
+    <body bgcolor="blue">
+
+        <div class="infintePathDotContainer">
+            <div class="circleInfiniteDot"></div>
+            <div class="circleInfiniteDot"></div>
+            <div class="circleInfiniteDot"></div>
+            <div class="circleInfiniteDot"></div>
+            <div class="circleInfiniteDot"></div>
+
+        </div>
+    </body>
+</html>
+
+<style>
+
+
+    .infintePathDotContainer
+    {
+        height: 75px;
+        width: 100px;
+        border:none;
+        position: absolute;
+        top:50%; left:50%;
+        margin-left:-50px; margin-top:-32.5px;
+        background-color: blue;
+    }
+
+    .circleInfiniteDot
+    {
+        height: 5px;
+        width: 5px;
+        border-radius: 50%;
+        background-color: white;
+        top:50%; margin-top:-2.5px;
+        left:50%; margin-left:-2.55px;
+        position: absolute;
+        animation: infinitePath 3s linear infinite;
+    }
+
+    .circleInfiniteDot:nth-child(2)
+    {
+        animation-delay: 0.2s;
+    }
+
+    .circleInfiniteDot:nth-child(3)
+    {
+        animation-delay: 0.4s;
+    }
+
+    .circleInfiniteDot:nth-child(4)
+    {
+        animation-delay: 0.6s;
+    }
+
+    .circleInfiniteDot:nth-child(5)
+    {
+        animation-delay: 0.8s;
+    }
+
+    @keyframes infinitePath
+    {
+        0%{
+            transform: rotate(0deg);
+            transform-origin: 400% 10%;
+        }
+
+        50%{
+            transform: rotate(360deg);
+            transform-origin: 400% 10%;
+        }
+
+        50.001%{
+            transform: rotate(0deg);
+            transform-origin: -400% 10%;
+        }
+
+        100%{
+            transform:rotate(-360deg);
+            transform-origin: -200% 10%;
+        }
+
+    }
+</style>

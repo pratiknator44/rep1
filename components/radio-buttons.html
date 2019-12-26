@@ -1,0 +1,271 @@
+<html>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <body bgcolor="#ccc">
+    <div class="dark-container" style="background-color: black; width: 49%; height:100%; display: inline-block; float: left; color: white;">
+        1.
+        <div class="radio-button-1-container">
+            <label class="radio-button-1-label">
+                <input type="radio" name="radio1" class="radio-button1 bita-radio" />
+                <label>One</label>
+                <span class="radio-mark"></span>
+            </label>
+            
+            <label class="radio-button-1-label">
+                <input type="radio" name="radio1" class="radio-button1 bita-radio"/>
+                <span class="radio-mark"></span>
+                <label>One</label>
+            </label>
+
+            <label class="radio-button-1-label">
+                <input type="radio" name="radio1" class="radio-button1 bita-radio"/>
+                <span class="radio-mark"></span>
+                <label>One</label>
+            </label>
+        </div>
+        <br><br><br>
+        2.
+        <div class="radio-button-1-container">
+                <label class="radio-button-1-label">
+                    <input type="radio" name="radio2" class="radio-button1 bita-radio" />
+                    <label>Two</label>
+                    <span class="radio-mark-1"></span>
+                </label>
+                
+                <label class="radio-button-1-label">
+                    <input type="radio" name="radio2" class="radio-button1 bita-radio"/>
+                    <span class="radio-mark-1"></span>
+                    <label>Two</label>
+                </label>
+            
+                <label class="radio-button-1-label">
+                    <input type="radio" name="radio2" class="radio-button1 bita-radio"/>
+                    <span class="radio-mark-1"></span>
+                    <label>Two</label>
+                </label>
+            </div>
+        </div>
+
+<!-- light theme -->
+
+<div class="lite-container" style="background-color: white; width: 49%; height:100%; display: inline-block; float: right; color: black;">
+        1.
+        <div class="radio-button-1-container-lite">
+            <label class="radio-button-1-label">
+                <input type="radio" name="radio3" class="radio-button1 bita-radio" />
+                <label>One</label>
+                <span class="radio-mark-lite"></span>
+            </label>
+            
+            <label class="radio-button-1-label">
+                <input type="radio" name="radio3" class="radio-button1 bita-radio"/>
+                <span class="radio-mark-lite"></span>
+                <label>One</label>
+            </label>
+
+            <label class="radio-button-1-label">
+                <input type="radio" name="radio3" class="radio-button1 bita-radio"/>
+                <span class="radio-mark-lite"></span>
+                <label>One</label>
+            </label>
+        </div>
+        <br><br><br>
+        2.
+        <div class="radio-button-1-container-lite">
+                <label class="radio-button-1-label">
+                    <input type="radio" name="radio4" class="radio-button1 bita-radio" />
+                    <label>Two</label>
+                    <span class="radio-mark-1-lite"></span>
+                </label>
+                
+                <label class="radio-button-1-label">
+                    <input type="radio" name="radio4" class="radio-button1 bita-radio"/>
+                    <span class="radio-mark-1-lite"></span>
+                    <label>Two</label>
+                </label>
+            
+                <label class="radio-button-1-label">
+                    <input type="radio" name="radio4" class="radio-button1 bita-radio"/>
+                    <span class="radio-mark-1-lite"></span>
+                    <label>Two</label>
+                </label>
+            </div>
+        </div>
+
+
+
+
+
+<style>
+body, html {
+    top:0; left: 0; margin: 0;
+}
+/* -------------------------------------- 1 -----------------------------------------------   */
+.radio-button-1-container {
+    margin-left:10px;
+    height: auto;
+    position: relative;
+    width: 150px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(black, rgb(71, 68, 68));
+    border: solid 1px #666;
+    border-radius: 5px;
+}
+
+.radio-button1 {
+    cursor: pointer;
+}
+
+.radio-button-1-label {
+    position: relative;
+    display: block;
+    height: 50px; min-width: 100px;
+    border-bottom: solid 1px #666;    
+}
+
+.radio-button-1-label > .bita-radio {
+height: 0; width: 0; opacity: 0;
+}
+
+.radio-button-1-label > label {
+    position: absolute;
+    top: 15px; left: 35px;
+}
+
+.radio-mark {
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    background-color: #000;
+    border-radius: 50%;
+    left:10px; top: 15px;
+    border: solid 0.5px #74DF00;
+}
+
+.radio-mark:after {
+    content: '';
+    position: absolute;
+    height: 50%; width:50%;
+    border-radius: 50%;
+    background-image: linear-gradient(45deg, #FFF, #74DF00);
+    top:25%; left:25%;
+    display: none;
+}
+
+.radio-button-1-label input:checked ~ .radio-mark:after {
+    display: block;
+}
+
+.radio-button-1-label:hover input ~ .radio-mark {
+  background-color: #666;
+}
+
+.radio-button-1-container > .radio-button-1-label:last-child {
+    border-bottom: none;
+}
+/* -------------------------------------- 1 ends -----------------------------------------------   */
+
+/* --------------------------------------- 2 ----------------------------------------------------*/
+.radio-mark-1 {
+    height: 10px;
+    width: 10px;
+    position: absolute;
+    background-color: #000;
+    border-radius: 50%;
+    left:10px; top: 20px;
+    border-bottom: solid 0.5px #666;
+    cursor: pointer;
+}
+
+.radio-button-1-label input:checked ~ .radio-mark-1 {
+    background-color: #74DF00;
+    box-shadow: 0px 0px 10px 2px #74DF00;
+}
+
+/*---------------------------------------- lite theme--------------------------------------------------------*/
+
+.radio-button-1-container-lite {
+    margin-left:10px;
+    height: auto;
+    position: relative;
+    width: 150px;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(white);
+    border: solid 1px #666;
+    border-radius: 5px;
+}
+
+.radio-button1 {
+    cursor: pointer;
+}
+
+.radio-button-1-label {
+    position: relative;
+    display: block;
+    height: 50px; min-width: 100px;
+}
+
+.radio-button-1-label > .bita-radio {
+height: 0; width: 0; opacity: 0;
+}
+
+.radio-button-1-label > label {
+    position: absolute;
+    top: 15px; left: 35px;
+}
+
+.radio-mark-lite {
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    background-color: #fff;
+    border-radius: 50%;
+    left:10px; top: 15px;
+    border: solid 0.5px #013ADF;
+}
+
+.radio-mark-lite:after {
+    content: '';
+    position: absolute;
+    height: 50%; width:50%;
+    border-radius: 50%;
+    background-image: linear-gradient(45deg, #fff, #013ADF);
+    top:25%; left:25%;
+    display: none;
+}
+
+.radio-button-1-label input:checked ~ .radio-mark-lite:after {
+    display: block;
+}
+
+.radio-button-1-label:hover input ~ .radio-mark {
+  background-color: #666;
+}
+
+
+.radio-button-1-container-lite > .radio-button-1-label:last-child {
+    border-bottom: none;
+}
+/* -------------------------------------- 1 ends -----------------------------------------------   */
+
+/* --------------------------------------- 2 ----------------------------------------------------*/
+.radio-mark-1-lite {
+    height: 10px;
+    width: 10px;
+    position: absolute;
+    background-color: #ccc;
+    border-radius: 50%;
+    left:10px; top: 20px;
+    border: solid 0.5px #666;
+    cursor: pointer;
+}
+
+.radio-button-1-label input:checked ~ .radio-mark-1-lite {
+    background-color: #013ADF;
+    box-shadow: 0px 0px 10px 2px#013ADF;
+}
+
+</style>        
+</body>
+</html>

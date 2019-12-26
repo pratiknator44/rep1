@@ -1,0 +1,50 @@
+body {
+    color: white;
+    background-color: black;
+}
+.radio-5-container {
+    height: 50%;
+    width: 50%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.gender-radio {
+    display: none;
+}
+
+.d-block {
+    display: block;
+    position: relative;
+}
+
+.radio-mark {
+    height: 10px; width: 10px;
+    display: inline-block;
+    border-radius: 10%;
+    border: solid 1px #666;
+} 
+
+.radio-mark-2 {
+    height: 10px;
+    width: 10px;
+    border-radius: 3px;
+    background-color: chartreuse;
+    display: inline-block;
+    border: solid 1px chartreuse;
+    position: absolute;
+    top: 5px; left: 200px;
+}
+
+.radio-label > input:checked ~ .radio-mark-2 {
+    animation: traverse-left 0.25s forwards linear;
+}
+
+@keyframes traverse-left {
+    from {
+        left: 200px;
+    }
+    to{
+        left: 0px;
+        box-shadow: 0px 0px 5px 3px chartreuse;
+    }
+}

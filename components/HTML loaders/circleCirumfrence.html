@@ -1,0 +1,61 @@
+<div class="circleCircumContainer">
+
+    <canvas id="circleCircumCanvas">
+
+    </canvas>
+</div>
+
+<script>
+canvas = document.getElementById("circleCircumCanvas");
+canvas.height = 100;
+canvas.width = 100;
+c = canvas.getContext('2d');
+
+var endAngle = Math.PI*0.033;
+var startAngle = Math.PI*0.25;
+
+var n=0;
+c.lineWidth = 5;  
+
+c.font = "15px Arial";
+
+
+
+function animateCanvas()
+{
+    c.clearRect(0, 0, canvas.width, canvas.height);   
+    c.beginPath();
+    c.strokeStyle = "green";
+    c.arc( 50, 50,45, 0, endAngle*n, false);
+    c.fillText(Math.floor(n*1.67)+"",43,54);        
+
+    c.stroke();
+    if(n==60)
+    { 
+        n=0; c.clearRect(0, 0, canvas.width, canvas.height);
+    }
+    else
+        n=n+1;
+}
+
+setInterval(animateCanvas, 1000);
+
+
+</script>
+<style>
+    .circleCircumContainer
+    {
+        height: 100px;
+        width: 100px;
+        background-color: none;
+        top:50%; left:50%;
+        margin-top:-50px; margin-left:-50px;
+        position: relative;
+    }
+
+    #circleCircumCanvas
+    {
+        /*
+        border: solid 1px black; */
+    }
+</style>

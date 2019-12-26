@@ -1,0 +1,233 @@
+html, body
+{
+    margin: 0px; padding: 0px;
+    background-image: linear-gradient(to right, red , yellow);}
+
+.container
+{
+    background-color: none;
+    width: 1000px;
+    min-height: 100px;
+    position: relative;
+    left:50%;
+    margin-left:-500px;
+}
+
+.navbar
+{
+    height: 40px;
+    width: 100%;
+    background-color:transparent;
+}
+
+.navbar-option
+{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    margin-right:20px;
+}
+
+.brand
+{
+    font-weight: 500;
+    font-size: 30px;
+}
+
+.navoption
+{
+    height: 40px;
+    font-size: 20px;
+}
+
+.navoption:hover
+{
+    text-decoration: underline;
+}
+
+.banner
+{
+    background-image:linear-gradient(rgb(2, 2, 37), aqua);
+    min-height:100px; width: 100%;
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+.welcome-text
+{
+    margin-left:40px;
+    margin-top:10px
+}
+
+.banner-label
+{
+    height: auto;
+    text-align: center;
+}
+
+.loading-tubelight
+{
+    font-size: 90px;
+    color: #666666;
+    text-shadow: none;
+}
+
+.L
+{
+    animation: illuminate 1s;
+    animation-iteration-count: 5;
+    animation-fill-mode: forwards;
+    color: #666666;
+    animation-delay: 2s;
+}
+.A
+{
+    animation: illuminate 1.5s;
+    animation-iteration-count: 3;
+    animation-fill-mode: forwards;     
+}
+.O
+{
+    animation: illuminate 3s;
+    animation-delay: 2s;
+    animation-iteration-count: 1;    animation-fill-mode: forwards;     
+}
+.D
+{
+    color: white;
+    text-shadow: 1px 1px 18px white;    animation-fill-mode: forwards;     
+}
+.I
+{
+    animation: illuminate 1s 50 forwards;
+    animation-delay: 2s;
+}
+.N
+{
+    animation: illuminate 2.5;
+    animation-delay: 1s;
+    animation-iteration-count: 2;     animation-fill-mode: forwards;     
+
+}
+.G
+{
+    animation: illuminate 3s;
+    animation-delay: 2s;
+    animation-iteration-count: 2;    animation-fill-mode: forwards;     
+
+}
+
+@keyframes illuminate
+{
+    0%{
+        columns: #666666;;
+        text-shadow: none;    
+    }
+
+    10%{
+        color: white;
+        text-shadow: 1px 1px 18px white;
+    }
+
+    15%
+    {
+        columns: #666666;;
+        text-shadow: none;    
+    }
+
+    25%
+    {
+        color: white;
+        text-shadow: 1px 1px 18px white;
+    }
+
+    30%
+    {
+        color: #666666;
+        text-shadow: none;
+    }
+
+    35%
+    {
+        color: white;
+        text-shadow: 1px 1px 18px white;
+    }
+
+
+
+    50%
+    {
+        color: white;
+        text-shadow: 1px 1px 18px white;
+    }
+
+    60%
+    {
+        color: #666666;
+        text-shadow: none;
+    }
+
+    75%
+    {
+        color: white;
+        text-shadow: 1px 1px 18px white;
+    }
+
+    100%
+    {
+        color: white;
+        text-shadow: 1px 1px 18px white;
+    }
+}
+
+.subheading
+{
+    text-align: center;
+    font-size: 15px;
+    color: yellow;  
+}
+
+.item-frame
+{
+    height: 50px;
+    width: 50px;
+    background-color:none;
+    border:solid 1px black;
+    display: inline-block;
+    margin-left:10px; margin-right:10px;
+}
+
+.item
+{
+   height: 100%;  width: 100%; display: block;
+   background-color: none;
+}
+
+.item-label
+{   
+    height: auto; width:100%;
+    background-color: white;
+    color: blue;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 15px;
+    text-align: center;
+}
+.item-label:hover
+{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.random-item-container
+{
+    margin-top:15px;
+}
+
+.center-div
+{
+    width: 450px;
+    margin-left:325px;
+    display: flex;
+    align-items: center;
+}
