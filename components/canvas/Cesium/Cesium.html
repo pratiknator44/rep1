@@ -1,0 +1,26 @@
+<html>
+    <head><script src="cesium.js"></script></head>
+<body>
+    
+    <canvas id="clockCanvas"></canvas>
+
+
+</body>
+</html>
+
+
+<script>
+var clock = new ClockCanvas("clockCanvas", 200,15); //200,15
+setInterval(clock.updateClock, 1000);
+</script>
+
+<style>
+
+
+    #clockCanvas
+    {
+      top:50%;
+      left:50%;
+      position: absolute;
+    }
+</style>

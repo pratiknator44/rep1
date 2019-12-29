@@ -1,0 +1,32 @@
+html, body {
+    margin: 0; padding: 0;
+}
+
+.align-content-center {
+    margin-top: 50px;
+    text-align: center;
+}
+.form-input {
+    height: 30px;
+    border: solid 1px #CCC;
+    border-right: none;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    outline: none;
+}
+.form-button {
+    height: 30px;
+    background-color:brown;
+    color: whitesmoke;
+    border: none;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    cursor: pointer;
+}
+
+#mycanvas {
+    /* height: 200px; */
+    /* width: 200px; */
+    margin-left: calc(50% - 100px);
+    margin-top: calc(20% - 100px);
+}
