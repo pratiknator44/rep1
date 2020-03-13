@@ -1,0 +1,77 @@
+<div class="fluid container bg-lite">
+        <!-- title, speech, author, highlights, dated back in -->
+    <div class="row">
+        <div class="col-12 text-secondary"><h2>Add a speech</h2></div>
+    </div>
+        
+    <div class="row">
+        <div class="col-12"><label>Title</label><label class="text-danger">*</label></div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <input type="text" class="form form-control" #title/>
+        </div>
+        
+        <div class="col-12" *ngIf="error.title">
+            <label class="text-danger">Title not correct</label>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-12"><label>Body</label><label class="text-danger">*</label></div>
+        <div class="col-12">
+            <label class="text-danger" *ngIf="error.body">Body cant be empty</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <textarea class="form form-control" #body ></textarea>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-6"><label>Author</label><label class="text-danger">*</label></div>
+        <div class="col-6"><label>Date</label><label class="text-danger">*</label></div>
+    </div>
+    
+    <div class="row">
+        <div class="col-6">
+            <input type="text" class="form form-control" #author />
+        </div>
+        <div class="col-6 row">
+            <div class="col-4">
+                <input type="number" placeholder="year" class="form form-control" max=2020 #year />
+                <!-- <select class="form form-control" #year>
+                    <option *ngFor="let y of years" value="{{y}}"> {{y}}</option>
+                </select> -->
+            </div>
+            <div class="col-4">
+                <select class="form form-control" #month>
+                    <option *ngFor="let m of months" value="{{m}}"> {{m}}</option>
+                </select>
+            </div>
+            <div class="col-4">
+                <select class="form form-control" #day>
+                    <option *ngFor="let d of days" value="{{d}}"> {{d}}</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-6">
+           <label class="text-danger" *ngIf="error.author">name cant have special characters or left empty</label>
+        </div>
+        <div class="col-6">
+            <label class="text-danger" *ngIf="error.date">cannot add future date</label>
+         </div>
+    </div>
+
+
+
+    <div class="row mt-4">
+        <div class="col-8">
+            <label class="font-italic text-secondary">fields marked with <label class="text-danger">*</label> are mandatory</label>
+        </div>
+        <div class="col-4"><div class="btn btn-success w-100" (click)="submitForm()">Add Speech</div></div>
+    </div>
+</div>
